@@ -7,6 +7,7 @@ public  class Escenario {
 	protected static final int BLOQUE_FIJO=0;
 	protected static final int BLOQUE_DESTRUIBLE=1;
 	protected static final int ESPACIO_EN_BLANCO=2;
+	protected static final int JUGADOR_1 = 3;
 	
 	private static final int TAM=9;
 	public int mat[][];
@@ -72,7 +73,7 @@ public  class Escenario {
 		Escenario escenario = new Escenario();
 		Bomberman bomber = new Bomberman();
 		escenario.crearJugador(bomber);
-		//bomber.moverHaciaAbajo(escenario);
+		bomber.moverHaciaAbajo(escenario);
 		//System.out.println(bomber.posicionX+ " "+ bomber.posicionY);
 		
 		escenario.dibujar();

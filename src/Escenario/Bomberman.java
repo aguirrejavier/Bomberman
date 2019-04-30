@@ -15,9 +15,10 @@ public class Bomberman  {
 	}
 	
 	public boolean moverHaciaArriba(Escenario esc) {
-		if(esc.mat[this.posicionX + 1][this.posicionY] == esc.ESPACIO_EN_BLANCO) {
-			this.posicionX ++;
-			esc.mat[this.posicionX-1][this.posicionY] = esc.ESPACIO_EN_BLANCO;
+		if(esc.mat[this.posicionX -1][this.posicionY] == esc.ESPACIO_EN_BLANCO) {
+			this.posicionX --;
+			esc.mat[this.posicionX + 1][this.posicionY] = esc.ESPACIO_EN_BLANCO;
+			esc.mat[this.posicionX][this.posicionY] = esc.JUGADOR_1;
 		}	
 		return false;
 	}
@@ -26,6 +27,7 @@ public class Bomberman  {
 		if(esc.mat[this.posicionX +1][this.posicionY] == esc.ESPACIO_EN_BLANCO) {
 			this.posicionX++ ;
 			esc.mat[this.posicionX-1][this.posicionY] = esc.ESPACIO_EN_BLANCO;
+			esc.mat[this.posicionX][this.posicionY] = esc.JUGADOR_1;
 		}	
 		return false;
 	}
@@ -34,6 +36,7 @@ public class Bomberman  {
 		if(esc.mat[this.posicionX][this.posicionY -1] == esc.ESPACIO_EN_BLANCO) {
 			this.posicionY--;
 			esc.mat[this.posicionX][this.posicionY+1] = esc.ESPACIO_EN_BLANCO;
+			esc.mat[this.posicionX][this.posicionY] = esc.JUGADOR_1;
 		}	
 		return false;
 	}
@@ -42,6 +45,7 @@ public class Bomberman  {
 		if(esc.mat[this.posicionX][this.posicionY +1] == esc.ESPACIO_EN_BLANCO) {
 			this.posicionY++;
 			esc.mat[this.posicionX][this.posicionY-1] = esc.ESPACIO_EN_BLANCO;
+			esc.mat[this.posicionX][this.posicionY] = esc.JUGADOR_1;
 		}	
 		return false;
 	}
